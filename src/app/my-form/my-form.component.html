@@ -1,0 +1,132 @@
+<div class="form-header">
+  <div class="create-location">
+    <h2>Create Location</h2>
+  </div> 
+    <button class="close-btn" (click)="close.emit()">✖</button>
+</div>
+
+<form (ngSubmit)="onSubmit()">
+<div class="p-fluid">
+    <div class="info">
+    <h2>Name and Contact</h2>
+    <div class="p-grid">
+        <div class="p-col-6">
+            <div class="p-field">
+              <label for="locationId">Location ID</label>
+              <input id="locationId" type="text" pInputText [(ngModel)]="locationId" required />
+            </div>
+        </div>
+          <div class="p-col-6">
+            <div class="p-field">
+              <label for="locationName">Location Name</label>
+              <input id="locationName" type="text" pInputText [(ngModel)]="locationName" required />
+            </div>
+          </div>
+      
+        <div class="p-col-6">
+            <div class="p-field">
+              <label for="contact">Contact Name</label>
+              <input id="contact" type="text" pInputText [(ngModel)]="contact" required />
+            </div>
+        </div>
+
+        <div class="p-col-6">
+            <div class="p-field">
+              <label for="phoneNumber">Phone No</label>
+              <input id="phoneNumber" type="number" pInputText [(ngModel)]="phoneNumber" required />
+            </div>
+        </div>
+  
+      <div class="p-col-6">
+        <div class="p-field">
+          <label for="email">Email</label>
+          <input id="email" type="text" pInputText [(ngModel)]="email" required />
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="info">
+    <h2>Address Info</h2>
+    <div class="p-grid">
+        <div class="p-col-6">
+          <div class="p-field">
+            <label for="addressLineOne">Address Line One</label>
+            <input id="addressLineOne" type="text" pInputText [(ngModel)]="addressLineOne" required />
+          </div>
+        </div>
+        <div class="p-col-6">
+          <div class="p-field">
+            <label for="addressLineTwo">Address Line Two</label>
+            <input id="addressLineTwo" type="text" pInputText [(ngModel)]="addressLineTwo" required />
+          </div>     
+        </div>
+    
+        <div class="p-col-6">   
+            <div class="p-field">
+                <label for="state">State/Province</label>
+                <input id="state" type="text" pInputText [(ngModel)]="state" required />
+          </div>
+        </div>
+          <div class="p-col-6"> 
+          <div class="p-field">
+            <label for="city">City</label>
+            <input id="city" type="text" pInputText [(ngModel)]="city" required />
+          </div>
+        </div>
+           
+        <div class="p-col-6">
+          <div class="p-field">
+            <label for="zipCode">Zip / Postal Code</label>
+            <input id="zipCode" type="number" pInputText [(ngModel)]="zipCode" required />
+          </div>
+        </div>
+          
+        <div class="p-col-6">
+          <div class="p-col-1">
+            <div class="p-field">
+              <label for="country">Country</label>
+              <p-dropdown 
+                id="country"
+                [options]="countries" 
+                [(ngModel)]="country" 
+                placeholder="Select a country" 
+                required 
+              ></p-dropdown>
+            </div>
+          </div>
+        </div>
+          
+        <div class="p-col-6">
+          <div class="p-field">
+            <label for="shipFormTax">Ship Form Tax</label>
+            <input id="shipFormTax" type="text" pInputText [(ngModel)]="shipFormTax" required />
+          </div>
+        </div>
+      </div>
+    </div>
+  
+      <div class="info">
+      <h2>Mailroom Contact</h2>
+      <div class="p-grid">
+        <div class="p-col-6">
+            <div class="p-field">
+                <label for="mailRoomContactName">Contact Name</label>
+                <input id="mailRoomContactName" type="text" pInputText [(ngModel)]="mailRoomContactName" required />
+              </div>
+        </div>
+        <div class="p-col-6">
+              <div class="p-field">
+                <label for="mailRoomPhoneNumber">Phone No</label>
+                <input id="mailRoomPhoneNumber" type="text" pInputText [(ngModel)]="mailRoomPhoneNumber" required />
+              </div>
+        </div>
+      </div>
+    </div>
+      <div class="save-btn">
+        <button  type="submit" label="Save">Save</button>
+      </div>
+</div>
+</form>
+
+  

@@ -1,0 +1,59 @@
+
+<div class="status-section">
+    <div class="total-location">
+        <div>
+            <h2>5</h2>
+            <h4>Total Locations</h4>
+            <div class="status-location"></div>
+        </div>
+    </div>
+    <div class="active">
+        <div>
+            <h2>5</h2>
+            <h4>Active</h4>
+            <div class="status-active"></div>
+        </div>
+    </div>
+    
+    <div class="inactive">
+        <div>
+            <h2>0</h2>
+            <h4>Inactive</h4>
+            <div class="status-inactive"></div>
+        </div>
+    </div>
+</div>
+
+<p-table [value]="userInformation" [tableStyle]="{'min-width': '50rem'}">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Contact Name</th>
+            <th>Phone No</th>
+            <th>Email</th>
+            <th>Address Line 1</th>
+            <th>Address Line 2</th>
+            <th>State / Province</th>
+            <th>City</th>
+            <th>Zip / Postal Code</th>
+            <th>Country</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-userInformation>
+        <tr>
+            <td>{{ userInformation.contactName }}</td>
+            <td>{{ userInformation.phoneNumber}}</td>
+            <td>{{ userInformation.email }}</td>
+            <td>{{ userInformation.addressLineOne }}</td>
+            <td>{{ userInformation.addressLineTwo }}</td>
+            <td>{{ userInformation.state}}</td>
+            <td>{{ userInformation.city }}</td>
+            <td>{{ userInformation.zipCode}}</td>
+            <td>{{ userInformation.country }}</td>
+            <td>{{ userInformation.status }}</td>
+            <td>{{ userInformation.actions }}</td>
+        </tr>
+    </ng-template>
+</p-table>
+
